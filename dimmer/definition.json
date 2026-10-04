@@ -1,0 +1,11 @@
+{
+  "name": "dimmer",
+  "script": "logic.star",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "LAMPS",
+      "protocol": "DIMMER"
+    }
+  ]
+}
