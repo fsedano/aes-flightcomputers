@@ -1,0 +1,57 @@
+{
+  "name": "RMI",
+  "script": "rmi.star",
+  "sim_params": [
+    "heading"
+  ],
+  "inputs": [
+    {
+      "name": "RMI RX",
+      "protocol": "ARINC429",
+      "speed": "S100_KHZ",
+      "equipment_files": [
+        "c_irs_unit.json"
+      ],
+      "labels": [
+        {
+          "name": "hdg_m_bcd",
+          "label": "14",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "irs_disc",
+          "label": "270",
+          "period_min_ms": 250,
+          "period_max_ms": 500
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "RMI TX",
+      "protocol": "ARINC429",
+      "speed": "S100_KHZ",
+      "equipment_files": [
+        "c_irs_unit.json"
+      ],
+      "labels": [
+        {
+          "name": "hdg_m_bcd",
+          "label": "14",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "irs_disc",
+          "label": "270",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        }
+      ],
+      "mode": "timetable"
+    }
+  ],
+  "display_name": "RMI"
+}

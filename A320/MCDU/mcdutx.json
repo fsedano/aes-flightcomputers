@@ -1,0 +1,22 @@
+{
+  "brand": "",
+  "name": "mcdu_tx",
+  "note": "ARINC 739 — TX side of the LRU. Only the heartbeat label needs a registration: every other LRU→MCDU word uses the MAL learned from the MCDU's ENQ as its label number and is sent through the send_raw_word builtin, which needs no label spec. In root-menu mode the same heartbeat label advertises one SAL per root LRU. (The old per-MAL stanzas — 145/146/220/245/246/312 — were a workaround from before send_raw_word existed.)",
+  "labels": {
+    "lru_id_172": {
+      "label": "172",
+      "description": "ARINC 739A LRU identifier heartbeat (octal label 172 — mandated by ARINC 739A §3.7.1). Data field carries an LRU SAL in bits 9-16 so the MCDU knows which subsystem to ENQ on which input port. Aviologic's pack_dec_no_sdi_no_ssm(122, ...) uses 122 DECIMAL = octal 172 — easy to mis-port. Transmitted periodically.",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 500,
+        "max": 5000
+      }
+    }
+  }
+}

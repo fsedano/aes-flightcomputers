@@ -1,0 +1,101 @@
+{
+  "name": "A320/MCDUUNIT",
+  "display_name": "MCDU unit (ARINC 739)",
+  "inputs": [
+    {
+      "name": "ONSIDE FMGC RCVR",
+      "protocol": "ARINC429",
+      "speed": "S100_KHZ",
+      "equipment_files": [
+        "in_fmgc_own.json"
+      ]
+    },
+    {
+      "name": "OFFSIDE FMGC RCVR",
+      "protocol": "ARINC429",
+      "speed": "S100_KHZ",
+      "equipment_files": [
+        "in_fmgc_opp.json"
+      ]
+    },
+    {
+      "name": "MAINTENANCE RCVR",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ",
+      "equipment_files": [
+        "in_cfdiu.json"
+      ]
+    },
+    {
+      "name": "ACARS RCVR",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ",
+      "equipment_files": [
+        "in_acars.json"
+      ]
+    },
+    {
+      "name": "AIDS DATA IN",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ",
+      "equipment_files": [
+        "in_dmu.json"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "MCDU TX",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ",
+      "equipment_files": [
+        "mcdu_tx.json"
+      ],
+      "labels": [
+        {
+          "label": "377",
+          "name": "mcdu_id_377",
+          "period_min_ms": 900,
+          "period_max_ms": 1100
+        },
+        {
+          "label": "270",
+          "name": "mcdu_dw1_270",
+          "period_min_ms": 400,
+          "period_max_ms": 600
+        },
+        {
+          "label": "350",
+          "name": "maint_w1_350",
+          "period_min_ms": 900,
+          "period_max_ms": 1100
+        },
+        {
+          "label": "306",
+          "name": "sal_306_fmgc",
+          "period_min_ms": 150,
+          "period_max_ms": 250
+        },
+        {
+          "label": "302",
+          "name": "sal_302_cfdiu",
+          "period_min_ms": 150,
+          "period_max_ms": 250
+        },
+        {
+          "label": "304",
+          "name": "sal_304_acars",
+          "period_min_ms": 150,
+          "period_max_ms": 250
+        },
+        {
+          "label": "305",
+          "name": "sal_305_dmu",
+          "period_min_ms": 150,
+          "period_max_ms": 250
+        }
+      ]
+    }
+  ],
+  "script": "logic.star"
+}

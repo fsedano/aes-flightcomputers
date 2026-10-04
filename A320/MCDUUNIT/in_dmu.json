@@ -1,0 +1,55 @@
+{
+  "brand": "Airbus (skeleton)",
+  "name": "in_dmu",
+  "note": "AIDS DATA IN (low speed, optional fit): DMU, one-way.",
+  "labels": {
+    "lru_id_172": {
+      "label": "172",
+      "description": "Subsystem identifier (SAL in bits 9-16)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 900,
+        "max": 1100
+      }
+    },
+    "a739_link_220": {
+      "label": "220",
+      "description": "Block-transfer words on MCDU MAL 220",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 50,
+        "max": 5000
+      }
+    }
+  }
+}

@@ -1,0 +1,1026 @@
+{
+    "brand": "Honeywell",
+    "name": "c_irs",
+    "note": "CENTER",
+    "labels": {
+        "lat_bcd": {
+            "label": "10",
+            "sdi_is_data": true,
+            "sdi": 0,
+            "description": "Latitude",
+            "data_type": "BCD",
+            "bcd_digits": 5.25,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "ssm_function": "SYSTEM_STATUS",
+            "value_resolution": 1.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 250.0,
+                "max": 500.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -90.0,
+                "max": 90.0
+            }
+        },
+        "lon_bcd": {
+            "label": "11",
+            "sdi_is_data": true,
+            "sdi": 0,
+            "description": "Longitude",
+            "data_type": "BCD",
+            "bcd_digits": 5.25,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "ssm_function": "SYSTEM_STATUS",
+            "value_resolution": 1.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 250.0,
+                "max": 500.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "gs_bcd": {
+            "label": "12",
+            "sdi": 0,
+            "description": "Ground Speed",
+            "data_type": "BCD",
+            "bcd_digits": 3.75,
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "ssm_function": "SYSTEM_STATUS",
+            "value_resolution": 1.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 250.0,
+                "max": 500.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": 0.0,
+                "max": 7000.0
+            }
+        },
+        "trk_t_bcd": {
+            "label": "13",
+            "sdi": 0,
+            "description": "True Track Angle",
+            "data_type": "BCD",
+            "bcd_digits": 3.75,
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "ssm_function": "SYSTEM_STATUS",
+            "value_resolution": 1.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 250.0,
+                "max": 500.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": 0.0,
+                "max": 3599.0
+            }
+        },
+        "hdg_m_bcd": {
+            "label": "14",
+            "sdi": 0,
+            "description": "Magnetic Heading",
+            "data_type": "BCD",
+            "bcd_digits": 3.75,
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "ssm_function": "SYSTEM_STATUS",
+            "value_resolution": 1.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 168.0,
+                "max": 333.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": 0.0,
+                "max": 3599.0
+            }
+        },
+        "wind_spd_bcd": {
+            "label": "15",
+            "sdi": 0,
+            "description": "Wind Speed",
+            "data_type": "BCD",
+            "bcd_digits": 2.75,
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "ssm_function": "SYSTEM_STATUS",
+            "value_resolution": 1.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 250.0,
+                "max": 500.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": 0.0,
+                "max": 799.0
+            }
+        },
+        "wind_dir_bcd": {
+            "label": "16",
+            "sdi": 0,
+            "description": "Wind Direction",
+            "data_type": "BCD",
+            "bcd_digits": 2.75,
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "ssm_function": "SYSTEM_STATUS",
+            "value_resolution": 1.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 250.0,
+                "max": 500.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": 0.0,
+                "max": 359.0
+            }
+        },
+        "hdg_t_bcd": {
+            "label": "44",
+            "sdi": 0,
+            "description": "True Heading",
+            "data_type": "BCD",
+            "bcd_digits": 3.75,
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "ssm_function": "SYSTEM_STATUS",
+            "value_resolution": 1.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 250.0,
+                "max": 500.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": 0.0,
+                "max": 3599.0
+            }
+        },
+        "lat": {
+            "label": "310",
+            "sdi_is_data": true,
+            "sdi": 0,
+            "description": "Latitude",
+            "data_bits": 20,
+            "data_type": "BNR",
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.000171661376953125,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 100.0,
+                "max": 200.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "lon": {
+            "label": "311",
+            "sdi_is_data": true,
+            "sdi": 0,
+            "description": "Longitude",
+            "data_bits": 20,
+            "data_type": "BNR",
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.000171661376953125,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 100.0,
+                "max": 200.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "gs": {
+            "label": "312",
+            "sdi": 0,
+            "description": "Ground Speed",
+            "data_bits": 15,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.125,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 50.0,
+                "max": 100.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4096.0,
+                "max": 4096.0
+            }
+        },
+        "trk_t": {
+            "label": "313",
+            "sdi": 0,
+            "description": "True Track Angle",
+            "data_bits": 11,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.087890625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 25.0,
+                "max": 50.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "hdg_t": {
+            "label": "314",
+            "sdi": 0,
+            "description": "True Heading",
+            "data_bits": 15,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0054931640625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 25.0,
+                "max": 50.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "wind_spd": {
+            "label": "315",
+            "sdi": 0,
+            "description": "Wind Speed",
+            "data_bits": 8,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 3.12109375,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 50.0,
+                "max": 100.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": 0.0,
+                "max": 799.0
+            }
+        },
+        "wind_dir": {
+            "label": "316",
+            "sdi": 0,
+            "description": "Wind Direction",
+            "data_bits": 8,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.703125,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 50.0,
+                "max": 100.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "trk_m": {
+            "label": "317",
+            "sdi": 0,
+            "description": "Mag Track Angle",
+            "data_bits": 15,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0054931640625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 25.0,
+                "max": 50.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "hdg_m": {
+            "label": "320",
+            "sdi": 0,
+            "description": "Magnetic HDG",
+            "data_bits": 15,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0054931640625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 25.0,
+                "max": 50.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "drift": {
+            "label": "321",
+            "sdi": 0,
+            "description": "Drift Angle",
+            "data_bits": 12,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.02197265625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 25.0,
+                "max": 50.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -90.0,
+                "max": 90.0
+            }
+        },
+        "flt_path_angle": {
+            "label": "322",
+            "sdi": 0,
+            "description": "Flight Path Angle",
+            "data_bits": 12,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.02197265625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 25.0,
+                "max": 50.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -90.0,
+                "max": 90.0
+            }
+        },
+        "flt_path_accel": {
+            "label": "323",
+            "sdi": 0,
+            "description": "Flight Path Accel",
+            "data_bits": 12,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0009765625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4.0,
+                "max": 4.0
+            }
+        },
+        "pitch": {
+            "label": "324",
+            "sdi": 0,
+            "description": "Pitch Angle",
+            "data_bits": 14,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.010986328125,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "roll": {
+            "label": "325",
+            "sdi": 0,
+            "description": "Roll Angle",
+            "data_bits": 14,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.010986328125,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "body_pitch_rate": {
+            "label": "326",
+            "sdi": 0,
+            "description": "Body Pitch Rate",
+            "data_bits": 13,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.015625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -128.0,
+                "max": 128.0
+            }
+        },
+        "body_roll_rate": {
+            "label": "327",
+            "sdi": 0,
+            "description": "Body Roll Rate",
+            "data_bits": 13,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.015625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -128.0,
+                "max": 128.0
+            }
+        },
+        "body_yaw_rate": {
+            "label": "330",
+            "sdi": 0,
+            "description": "Body Yaw Rate",
+            "data_bits": 13,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.015625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -128.0,
+                "max": 128.0
+            }
+        },
+        "body_long_accel": {
+            "label": "331",
+            "sdi": 0,
+            "description": "Body Longitudinal Accel",
+            "data_bits": 12,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0009765625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4.0,
+                "max": 4.0
+            }
+        },
+        "body_lat_accel": {
+            "label": "332",
+            "sdi": 0,
+            "description": "Body Lateral Accel",
+            "data_bits": 12,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0009765625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4.0,
+                "max": 4.0
+            }
+        },
+        "body_norm_accel": {
+            "label": "333",
+            "sdi": 0,
+            "description": "Body Normal Accel",
+            "data_bits": 12,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0009765625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4.0,
+                "max": 4.0
+            }
+        },
+        "plat_hdg": {
+            "label": "334",
+            "sdi": 0,
+            "description": "Platform Heading",
+            "data_bits": 11,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.087890625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 20.0,
+                "max": 40.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        "trk_angle_rate": {
+            "label": "335",
+            "sdi": 0,
+            "description": "Track Angle Rate",
+            "data_bits": 11,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.015625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -32.0,
+                "max": 32.0
+            }
+        },
+        "pitch_att_rate": {
+            "label": "336",
+            "sdi": 0,
+            "description": "Pitch Attitude Rate",
+            "data_bits": 13,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.015625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -128.0,
+                "max": 128.0
+            }
+        },
+        "roll_att_rate": {
+            "label": "337",
+            "sdi": 0,
+            "description": "Roll Attitude Rate",
+            "data_bits": 13,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.015625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -128.0,
+                "max": 128.0
+            }
+        },
+        "potential_vs": {
+            "label": "360",
+            "sdi": 0,
+            "description": "Potential vertical speed",
+            "data_bits": 13,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 4.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -32768.0,
+                "max": 32768.0
+            }
+        },
+        "inertial_alt": {
+            "label": "361",
+            "sdi_is_data": true,
+            "sdi": 0,
+            "description": "Inertial Altitude",
+            "data_bits": 20,
+            "data_type": "BNR",
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.125,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 20.0,
+                "max": 40.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -131072.0,
+                "max": 131072.0
+            }
+        },
+        "along_trk_accel": {
+            "label": "362",
+            "sdi": 0,
+            "description": "Along Track Accel",
+            "data_bits": 12,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0009765625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4.0,
+                "max": 4.0
+            }
+        },
+        "cross_trk_accel": {
+            "label": "363",
+            "sdi": 0,
+            "description": "Cross Track Accel",
+            "data_bits": 12,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0009765625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4.0,
+                "max": 4.0
+            }
+        },
+        "vertical_accel": {
+            "label": "364",
+            "sdi": 0,
+            "description": "Vertical Accel",
+            "data_bits": 12,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.0009765625,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 10.0,
+                "max": 20.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4.0,
+                "max": 4.0
+            }
+        },
+        "ivs": {
+            "label": "365",
+            "sdi": 0,
+            "description": "Inertial Vertical Speed",
+            "data_bits": 15,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 1.0,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 20.0,
+                "max": 40.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -32768.0,
+                "max": 32768.0
+            }
+        },
+        "ns_vel": {
+            "label": "366",
+            "sdi": 0,
+            "description": "N-S Velocity",
+            "data_bits": 15,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.125,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 50.0,
+                "max": 100.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4096.0,
+                "max": 4096.0
+            }
+        },
+        "ew_vel": {
+            "label": "367",
+            "sdi": 0,
+            "description": "E-W Velocity",
+            "data_bits": 15,
+            "data_type": "BNR",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "pad_bits": {},
+            "data_is_signed": true,
+            "value_resolution": 0.125,
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 100.0,
+                "max": 200.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": -4096.0,
+                "max": 4096.0
+            }
+        },
+        "irs_disc": {
+            "label": "270",
+            "pad_bits": {
+                "cycle": {
+                    "bits": "29",
+                    "description": "Irs CYCLE"
+                },
+                "align_sts3": {
+                    "bits": "28",
+                    "description": "Time to Align3"
+                },
+                "align_sts2": {
+                    "bits": "27",
+                    "description": "Time to Align2"
+                },
+                "align_sts1": {
+                    "bits": "26",
+                    "description": "Time to Align1"
+                },
+                "ent_pos": {
+                    "bits": "25",
+                    "description": "ENTER Position"
+                },
+                "adc_iru_f": {
+                    "bits": "24",
+                    "description": "Adc/Iru FAULT"
+                },
+                "exc_mot": {
+                    "bits": "23",
+                    "description": "Excess Motion ERROR"
+                },
+                "no_init": {
+                    "bits": "22",
+                    "description": "No Irs Initialization"
+                },
+                "align_f": {
+                    "bits": "21",
+                    "description": "Align Fault"
+                },
+                "dc_f_ondc": {
+                    "bits": "20",
+                    "description": "DC Fail on DC"
+                },
+                "iru_f": {
+                    "bits": "19",
+                    "description": "Iru FAULT"
+                },
+                "adc_f": {
+                    "bits": "18",
+                    "description": "Adc FAULT"
+                },
+                "on_dc": {
+                    "bits": "17",
+                    "description": "Irs ON DC"
+                },
+                "dc_fail": {
+                    "bits": "16",
+                    "description": "Irs DC FAIL"
+                },
+                "att_inv": {
+                    "bits": "15",
+                    "description": "Attitude INVALID"
+                },
+                "set_hdg": {
+                    "bits": "14",
+                    "description": "Set HEADING"
+                },
+                "nav_mode": {
+                    "bits": "13",
+                    "description": "Irs in NAV mode"
+                },
+                "rev_att": {
+                    "bits": "12",
+                    "description": "Reverse Attitude Mode"
+                },
+                "align_mode": {
+                    "bits": "11",
+                    "description": "Align Mode / NOT READY"
+                }
+            },
+            "sdi": 0,
+            "description": "IRS Discrete Word 1",
+            "data_bits": 19,
+            "data_type": "DISCRETE",
+            "sdi_is_data": false,
+            "channel_direction": "TX",
+            "ssm": "NORMAL_OPERATION",
+            "data_init": "0",
+            "timing_ms": {
+                "min": 250.0,
+                "max": 500.0
+            },
+            "value_clamping": {
+                "enable": true,
+                "min": 0.0,
+                "max": 0.0
+            }
+        }
+    },
+    "description": "Inertial Reference System"
+}

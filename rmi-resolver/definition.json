@@ -1,0 +1,17 @@
+{
+  "display_name": "rmi-resolver",
+  "name": "rmi-resolver",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "RMI heading",
+      "protocol": "SYNCHRO",
+      "mode": "SYNCHRO_3_PHASE",
+      "offset": 0
+    }
+  ],
+  "sim_params": [
+    "heading"
+  ],
+  "script": "logic.star"
+}

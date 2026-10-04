@@ -1,0 +1,7 @@
+{
+  "brand": "Honeywell",
+  "name": "FCU_145",
+  "description": "A320 Flight Control Unit ARINC 429 equipment definition. Labels transmitted by the FCU (101, 102, 234) and labels received from FMGC OWN A/B/C buses per A320 AMM 22-86-00.",
+  "note": "A320 FCU",
+  "labels": {}
+}

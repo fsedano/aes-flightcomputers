@@ -1,0 +1,379 @@
+{
+  "display_name": "FCU",
+  "inputs": [
+    {
+      "equipment_files": [
+        "rx.json"
+      ],
+      "name": "FCU IA",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ"
+    },
+    {
+      "equipment_files": [
+        "rx.json"
+      ],
+      "name": "FCU IB",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ"
+    }
+  ],
+  "name": "A320/FCU",
+  "outputs": [
+    {
+      "labels": [
+        {
+          "label": "051",
+          "name": "maneuvring_speed_ref_051",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "077",
+          "name": "approach_speed_fm_077",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "103",
+          "name": "preset_spd_103",
+          "period_min_ms": 100,
+          "period_max_ms": 200,
+          "disabled": false
+        },
+        {
+          "label": "105",
+          "name": "runway_hdg_mem_105",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "106",
+          "name": "preset_mach_106",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "107",
+          "name": "preset_spd_107",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "145",
+          "name": "fcu_word5_145",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "146",
+          "name": "fcu_word4_146",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "204",
+          "name": "altitude_204",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "205",
+          "name": "mach_205",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "206",
+          "name": "cas_206",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "270",
+          "name": "fcu_ats_dw_270",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "271",
+          "name": "ats_fma_dw_271",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "272",
+          "name": "fadec_dw_272",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "273",
+          "name": "discrete_word_3_273",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "274",
+          "name": "fcu_dw1_274",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "275",
+          "name": "discrete_word_2_275",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "276",
+          "name": "discrete_word_6_276",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "304",
+          "name": "approach_spd_target_304",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "305",
+          "name": "synchro_spd_value_305",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "306",
+          "name": "low_target_spd_margin_306",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "307",
+          "name": "hi_target_spd_margin_307",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "317",
+          "name": "track_317",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "320",
+          "name": "heading_320",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "322",
+          "name": "fpa_322",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "365",
+          "name": "altitude_rate_365",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "ils_freq_opp_033",
+          "label": "033",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "loc_sensibility_corr_050",
+          "label": "050",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_q_com_upstream_057",
+          "label": "057",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_p_ail_upstream_060",
+          "label": "060",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_p_spl_upstream_061",
+          "label": "061",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_r_upstream_062",
+          "label": "062",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_nose_wheel_upstream_063",
+          "label": "063",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "fmgc_131",
+          "label": "131",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "dvch_132",
+          "label": "132",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "throttle_pos_tla_133",
+          "label": "133",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "roll_fd_com_140",
+          "label": "140",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "pitch_fd_com_141",
+          "label": "141",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "yaw_fd_com_143",
+          "label": "143",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "accuracy_input_144",
+          "label": "144",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "theta_c_ap_upr_modes_155",
+          "label": "155",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "dnzc_ap_upr_modes_156",
+          "label": "156",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "phi_c_ap_upr_modes_157",
+          "label": "157",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "theta_c_fd_upr_mode_160",
+          "label": "160",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "fm_alt_constraint_164",
+          "label": "164",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "radio_height_opp_165",
+          "label": "165",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "runway_hdg_opp_172",
+          "label": "172",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "localizer_dev_opp_173",
+          "label": "173",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "glide_dev_opp_174",
+          "label": "174",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "flx_to_temp_214",
+          "label": "214",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_p_ail_voted_310",
+          "label": "310",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_p_spl_voted_311",
+          "label": "311",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_r_voted_312",
+          "label": "312",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_nose_whl_voted_313",
+          "label": "313",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "delta_q_voted_314",
+          "label": "314",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "name": "n1_target_com_343",
+          "label": "343",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        },
+        {
+          "label": "073",
+          "name": "v2_speed_073",
+          "period_min_ms": 100,
+          "period_max_ms": 200
+        }
+      ],
+      "mode": "timetable",
+      "name": "FCU OA",
+      "protocol": "ARINC429",
+      "speed": "S100_KHZ",
+      "equipment_files": [
+        "e2.json"
+      ]
+    }
+  ],
+  "script": "logic.star"
+}

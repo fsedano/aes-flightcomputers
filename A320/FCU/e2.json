@@ -1,0 +1,1486 @@
+{
+  "brand": "Honeywell",
+  "name": "FCUE2",
+  "description": "A320 Flight Control Unit ARINC 429 equipment definition. Labels transmitted by the FCU (101, 102, 234) and labels received from FMGC OWN A/B/C buses per A320 AMM 22-86-00.",
+  "note": "A320 FCU",
+  "labels": {
+    "fcu_heading": {
+      "label": "101",
+      "description": "Selected Heading from FCU (A320 AMM 22-86-00: W +/- 180 DEG, 12 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0879,
+      "data_bits": 11,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "fcu_alt": {
+      "label": "102",
+      "description": "Selected Altitude from FCU (A320 AMM 22-86-00: W 65536 FT, 16 bits BNR, XMSN 120 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 16,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 60,
+        "max": 120
+      }
+    },
+    "fcu_baro_cap": {
+      "label": "234",
+      "description": "Baro setting (BCD) transmitted by FCU",
+      "data_type": "BCD",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "SYSTEM_STATUS",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 17,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "bcd_digits": 4.75,
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "fcu_ats_dw_270": {
+      "label": "270",
+      "description": "ATS Discrete Word (A320 AMM 22-86-00: FMGC OWN A, XMSN 60 ms)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {
+        "a_thr_engaged": {
+          "bits": "13",
+          "description": "A/THR ENGAGED (bit status 1)"
+        },
+        "a_thr_active": {
+          "bits": "14",
+          "description": "A/THR ACTIVE (bit status 1)"
+        },
+        "ats_spd_mach_mode": {
+          "bits": "18",
+          "description": "ATS SPD MACH MODE (bit status 1)"
+        },
+        "fcu_mach_selection": {
+          "bits": "19",
+          "description": "FCU MACH SELECTION (bit status 1) — drives FCU SPD/MACH display"
+        },
+        "retard_mode": {
+          "bits": "20",
+          "description": "RETARD MODE (bit status 1)"
+        }
+      },
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "preset_spd_103": {
+      "label": "103",
+      "description": "PFD SEL SPEED from FMGC (A320 AMM 22-86-00: FMGC OWN A, W 512 KT, 11 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.25,
+      "data_bits": 12,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "preset_mach_106": {
+      "label": "106",
+      "description": "Preset Mach from FCU or MCDU (A320 AMM 22-86-00: FMGC OWN A, W 4.096 M, 12 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.001,
+      "data_bits": 12,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "fcu_word5_145": {
+      "label": "145",
+      "description": "Discrete Word 5 (A320 AMM 22-86-00: FMGC OWN A, 13 bits DIS, XMSN 60 ms)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {
+        "mach_sel": {
+          "bits": "11",
+          "description": "MACH SEL (bit status 1)"
+        },
+        "v_path_speed_submode": {
+          "bits": "12",
+          "description": "V. PATH / SPEED SUBMODE (bit status 1)"
+        },
+        "v_path_thrust_submode": {
+          "bits": "13",
+          "description": "V. PATH / THRUST SUBMODE (bit status 1)"
+        },
+        "vs_sel_submode": {
+          "bits": "14",
+          "description": "V/S SEL SUBMODE (bit status 1)"
+        },
+        "fpa_sel_submode": {
+          "bits": "15",
+          "description": "FPA SEL SUBMODE (bit status 1)"
+        },
+        "alt_sel_submode": {
+          "bits": "16",
+          "description": "ALT SEL SUBMODE (bit status 1)"
+        },
+        "spd_thrust_submode": {
+          "bits": "17",
+          "description": "SPD THRUST SUBMODE (bit status 1)"
+        },
+        "auto_spd_control": {
+          "bits": "19",
+          "description": "AUTO SPD CONTROL (bit status 1)"
+        },
+        "manual_spd_control": {
+          "bits": "20",
+          "description": "MANUAL SPD CONTROL (bit status 1)"
+        },
+        "pitch_fd_bars_flashing": {
+          "bits": "24",
+          "description": "PITCH FD BARS FLASHING (bit status 1)"
+        },
+        "spd_window_display": {
+          "bits": "27",
+          "description": "SPD WINDOW DISPLAY (bit status 1)"
+        },
+        "top_of_spd_synchro": {
+          "bits": "28",
+          "description": "TOP OF SPD SYNCHRO (bit status 1)"
+        },
+        "fms_mach_selection": {
+          "bits": "29",
+          "description": "FMS MACH SELECTION (bit status 1)"
+        }
+      },
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "fcu_word4_146": {
+      "label": "146",
+      "description": "Discrete Word 4 (A320 AMM 22-86-00: FMGC OWN A, 15 bits DIS, XMSN 60 ms)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {
+        "ap_instinctive_disc": {
+          "bits": "11",
+          "description": "AP INSTINCTIVE DISC (bit status 0 — active-low)"
+        },
+        "ap_engaged": {
+          "bits": "12",
+          "description": "AP ENGAGED (bit status 1)"
+        },
+        "fd_engaged": {
+          "bits": "13",
+          "description": "FD ENGAGED (bit status 1)"
+        },
+        "land_trk_mode": {
+          "bits": "14",
+          "description": "LAND TRK MODE (bit status 1)"
+        },
+        "land_ii_capability": {
+          "bits": "16",
+          "description": "LAND II CAPABILITY (bit status 1)"
+        },
+        "land_iii_fail_passive_caplty": {
+          "bits": "17",
+          "description": "LAND III FAIL PASSIVE CAPLTY (bit status 1)"
+        },
+        "land_iii_fail_oper_caplty": {
+          "bits": "18",
+          "description": "LAND III FAIL OPER CAPLTY (bit status 1)"
+        },
+        "ap_inop": {
+          "bits": "19",
+          "description": "AP INOP (bit status 1)"
+        },
+        "land_ii_inop": {
+          "bits": "20",
+          "description": "LAND II INOP (bit status 1)"
+        },
+        "land_iii_fail_passive_inop": {
+          "bits": "21",
+          "description": "LAND III FAIL PASSIVE INOP (bit status 1)"
+        },
+        "land_iii_fail_oper_inop": {
+          "bits": "22",
+          "description": "LAND III FAIL OPER INOP (bit status 1)"
+        },
+        "land_ii_capacity": {
+          "bits": "23",
+          "description": "LAND II CAPACITY (bit status 1)"
+        },
+        "land_iii_fail_passive_capacity": {
+          "bits": "24",
+          "description": "LAND III FAIL PASSIVE CAPACITY (bit status 1)"
+        },
+        "land_iii_fail_oper_capacity": {
+          "bits": "25",
+          "description": "LAND III FAIL OPER CAPACITY (bit status 1)"
+        },
+        "rwy_hdg_mem": {
+          "bits": "26",
+          "description": "RWY HDG MEM (bit status 1)"
+        }
+      },
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "fcu_dw1_274": {
+      "label": "274",
+      "description": "Discrete Word 1 (A320 AMM 22-86-00: FMGC OWN A, 17 bits DIS, XMSN 60 ms)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {
+        "spd_match_switching": {
+          "bits": "21",
+          "description": "SPD/MACH switching"
+        }
+      },
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "ils_freq_opp_033": {
+      "label": "033",
+      "description": "ILS frequency (OPP) (A320 AMM 22-86-00: FMGC OWN A, BCD, 4 digits, XMSN 360 ms)",
+      "data_type": "BCD",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm_function": "SYSTEM_STATUS",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 16,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "bcd_digits": 4,
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "loc_sensibility_corr_050": {
+      "label": "050",
+      "description": "LOC SENSIBILITY CORR (A320 AMM 22-86-00: FMGC OWN A, W +/- 8 DDM, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.000244140625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "maneuvring_speed_ref_051": {
+      "label": "051",
+      "description": "MANEUVRING SPEED REF (A320 AMM 22-86-00: FMGC OWN A, W 512 KT, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.015625,
+      "data_bits": 15,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_q_com_upstream_057": {
+      "label": "057",
+      "description": "DELTA Q COM UPSTREAM VOTER (A320 AMM 22-86-00: FMGC OWN A, W +/- 32 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0009765625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_p_ail_upstream_060": {
+      "label": "060",
+      "description": "DELTA P (AIL) UPSTREAM VOTER (A320 AMM 22-86-00: FMGC OWN A, W +/- 32 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0009765625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_p_spl_upstream_061": {
+      "label": "061",
+      "description": "DELTA P (SPL) UPSTREAM VOTER (A320 AMM 22-86-00: FMGC OWN A, W +/- 64 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.001953125,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_r_upstream_062": {
+      "label": "062",
+      "description": "DELTA R UPSTREAM VOTER (A320 AMM 22-86-00: FMGC OWN A, W +/- 32 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0009765625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_nose_wheel_upstream_063": {
+      "label": "063",
+      "description": "DELTA NOSE WHEEL UPSTREAM VOTER (A320 AMM 22-86-00: FMGC OWN A, W +/- 32 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0009765625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "v2_speed_073": {
+      "label": "073",
+      "description": "V2 SPEED (A320 AMM 22-86-00: FMGC OWN A, W 512 KT, 11 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.25,
+      "data_bits": 11,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "approach_speed_fm_077": {
+      "label": "077",
+      "description": "APPROACH SPEED FM (A320 AMM 22-86-00: FMGC OWN A, W 512 KT, 11 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.25,
+      "data_bits": 11,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "runway_hdg_mem_105": {
+      "label": "105",
+      "description": "RUNWAY HDG MEM (A320 AMM 22-86-00: FMGC OWN A, W +/- 180 DEG, 11 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.087890625,
+      "data_bits": 11,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "preset_spd_107": {
+      "label": "107",
+      "description": "PRESET SPD FROM FCU OR MCDU (A320 AMM 22-86-00: FMGC OWN A, W 512 KT, 11 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.25,
+      "data_bits": 11,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "fmgc_131": {
+      "label": "131",
+      "description": "Label 131 (W 65536 m) (A320 AMM 22-86-00: FMGC OWN A, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 2.0,
+      "data_bits": 15,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "dvch_132": {
+      "label": "132",
+      "description": "DVCH (A320 AMM 22-86-00: FMGC OWN A, W 1024 KT, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.03125,
+      "data_bits": 15,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "throttle_pos_tla_133": {
+      "label": "133",
+      "description": "THROTTLE POS (TLA) (A320 AMM 22-86-00: FMGC OWN A, W 180 DEG, 12 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0439453125,
+      "data_bits": 12,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "roll_fd_com_140": {
+      "label": "140",
+      "description": "ROLL FD COM (A320 AMM 22-86-00: FMGC OWN A, W +/- 180 DEG, 12 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0439453125,
+      "data_bits": 12,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "pitch_fd_com_141": {
+      "label": "141",
+      "description": "PITCH FD COM (A320 AMM 22-86-00: FMGC OWN A, W +/- 180 DEG, 12 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0439453125,
+      "data_bits": 12,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "yaw_fd_com_143": {
+      "label": "143",
+      "description": "YAW FD COM (A320 AMM 22-86-00: FMGC OWN A, W +/- 180 DEG, 12 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0439453125,
+      "data_bits": 12,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "accuracy_input_144": {
+      "label": "144",
+      "description": "ACCURACY INPUT (A320 AMM 22-86-00: FMGC OWN A, W +/- 45 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.001373291015625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "theta_c_ap_upr_modes_155": {
+      "label": "155",
+      "description": "theta c AP UPR MODES (A320 AMM 22-86-00: FMGC OWN A, W +/- 20 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0006103515625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "dnzc_ap_upr_modes_156": {
+      "label": "156",
+      "description": "DNZC AP UPR MODES (A320 AMM 22-86-00: FMGC OWN A, W +/- 1.2 g, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 3.662109375e-05,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "phi_c_ap_upr_modes_157": {
+      "label": "157",
+      "description": "phi c AP UPR MODES (A320 AMM 22-86-00: FMGC OWN A, W +/- 45 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.001373291015625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "theta_c_fd_upr_mode_160": {
+      "label": "160",
+      "description": "theta c FD UPR MODE (A320 AMM 22-86-00: FMGC OWN A, W +/- 180 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0054931640625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "fm_alt_constraint_164": {
+      "label": "164",
+      "description": "FM ALT CONSTRAINT (A320 AMM 22-86-00: FMGC OWN A, W 65536 FT, 16 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1.0,
+      "data_bits": 16,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "radio_height_opp_165": {
+      "label": "165",
+      "description": "RADIO HEIGHT OPP (A320 AMM 22-86-00: FMGC OWN A, W +/- 8192 FT, 16 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.125,
+      "data_bits": 16,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "runway_hdg_opp_172": {
+      "label": "172",
+      "description": "RUNWAY HDG OPP (A320 AMM 22-86-00: FMGC OWN A, W +/- 180 DEG, 11 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.087890625,
+      "data_bits": 11,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "localizer_dev_opp_173": {
+      "label": "173",
+      "description": "LOCALIZER DEV OPP (A320 AMM 22-86-00: FMGC OWN A, W +/- 0.4 DDM, 12 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 9.765625e-05,
+      "data_bits": 12,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "glide_dev_opp_174": {
+      "label": "174",
+      "description": "GLIDE DEV OPP (A320 AMM 22-86-00: FMGC OWN A, W +/- 0.8 DDM, 12 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0001953125,
+      "data_bits": 12,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "altitude_204": {
+      "label": "204",
+      "description": "ALTITUDE (A320 AMM 22-86-00: FMGC OWN A, W +/- 131072 FT, 17 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1.0,
+      "data_bits": 17,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "mach_205": {
+      "label": "205",
+      "description": "MACH (A320 AMM 22-86-00: FMGC OWN A, W 4.096 M, 16 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 6.25e-05,
+      "data_bits": 16,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "cas_206": {
+      "label": "206",
+      "description": "CAS (A320 AMM 22-86-00: FMGC OWN A, W 1024 KT, 14 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0625,
+      "data_bits": 14,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "flx_to_temp_214": {
+      "label": "214",
+      "description": "FLX TO TEMP (A320 AMM 22-86-00: FMGC OWN A, W +/- 128 degC, 7 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1.0,
+      "data_bits": 7,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "approach_spd_target_304": {
+      "label": "304",
+      "description": "APPROACH SPD TARGET (A320 AMM 22-86-00: FMGC OWN A, W 512 KT, 11 bits BNR, XMSN 180 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.25,
+      "data_bits": 11,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 90,
+        "max": 180
+      }
+    },
+    "synchro_spd_value_305": {
+      "label": "305",
+      "description": "SYNCHRO SPD VALUE (A320 AMM 22-86-00: FMGC OWN A, W 1024 KT, 15 bits BNR, XMSN 180 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.03125,
+      "data_bits": 15,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 90,
+        "max": 180
+      }
+    },
+    "low_target_spd_margin_306": {
+      "label": "306",
+      "description": "LOW TARGET SPD MARGIN (A320 AMM 22-86-00: FMGC OWN A, W 512 KT, 11 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.25,
+      "data_bits": 11,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "hi_target_spd_margin_307": {
+      "label": "307",
+      "description": "HI TARGET SPD MARGIN (A320 AMM 22-86-00: FMGC OWN A, W 512 KT, 11 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.25,
+      "data_bits": 11,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_p_ail_voted_310": {
+      "label": "310",
+      "description": "DELTA P (AIL) VOTED COM (A320 AMM 22-86-00: FMGC OWN A, W +/- 32 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0009765625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_p_spl_voted_311": {
+      "label": "311",
+      "description": "DELTA P (SPL) VOTED COM (A320 AMM 22-86-00: FMGC OWN A, W +/- 64 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.001953125,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_r_voted_312": {
+      "label": "312",
+      "description": "DELTA R VOTED COM (A320 AMM 22-86-00: FMGC OWN A, W +/- 32 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0009765625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_nose_whl_voted_313": {
+      "label": "313",
+      "description": "DELTA NOSE WHL VOTED COM (A320 AMM 22-86-00: FMGC OWN A, W +/- 32 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0009765625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "delta_q_voted_314": {
+      "label": "314",
+      "description": "DELTA Q VOTED COM (A320 AMM 22-86-00: FMGC OWN A, W +/- 32 DEG, 15 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0009765625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "track_317": {
+      "label": "317",
+      "description": "TRACK (A320 AMM 22-86-00: FMGC OWN A, W +/- 180 DEG, 15 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0054931640625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "heading_320": {
+      "label": "320",
+      "description": "HEADING (A320 AMM 22-86-00: FMGC OWN A, W +/- 180 DEG, 15 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0054931640625,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "fpa_322": {
+      "label": "322",
+      "description": "FPA (A320 AMM 22-86-00: FMGC OWN A, W +/- 180 DEG, 12 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.0439453125,
+      "data_bits": 12,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "n1_target_com_343": {
+      "label": "343",
+      "description": "N1 TARGET COM (A320 AMM 22-86-00: FMGC OWN A, W 256 %RPM, 14 bits BNR, XMSN 60 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 0.015625,
+      "data_bits": 14,
+      "data_is_signed": false,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "altitude_rate_365": {
+      "label": "365",
+      "description": "ALTITUDE RATE (A320 AMM 22-86-00: FMGC OWN A, W +/- 32768 FT/MN, 15 bits BNR, XMSN 360 ms)",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1.0,
+      "data_bits": 15,
+      "data_is_signed": true,
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 180,
+        "max": 360
+      }
+    },
+    "ats_fma_dw_271": {
+      "label": "271",
+      "description": "ATS FMA Discrete Word (A320 AMM 22-86-00: FMGC OWN A, 13 bits DIS, XMSN 60 ms)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {
+        "to_ga_display": {
+          "bits": "11",
+          "description": "TO/GA DISPLAY (bit status 1)"
+        },
+        "mct_display": {
+          "bits": "12",
+          "description": "MCT DISPLAY (bit status 1)"
+        },
+        "flx_display": {
+          "bits": "13",
+          "description": "FLX DISPLAY (bit status 1)"
+        },
+        "clb_display": {
+          "bits": "14",
+          "description": "CLB DISPLAY (bit status 1)"
+        },
+        "thr_display": {
+          "bits": "15",
+          "description": "THR DISPLAY (bit status 1)"
+        },
+        "idle_display": {
+          "bits": "16",
+          "description": "IDLE DISPLAY (bit status 1)"
+        },
+        "a_floor_display": {
+          "bits": "17",
+          "description": "A.FLOOR DISPLAY (bit status 1)"
+        },
+        "to_ga_lock_display": {
+          "bits": "18",
+          "description": "TO/GA LOCK DISPLAY (bit status 1)"
+        },
+        "speed_display": {
+          "bits": "19",
+          "description": "SPEED DISPLAY (bit status 1)"
+        },
+        "mach_display": {
+          "bits": "20",
+          "description": "MACH DISPLAY (bit status 1)"
+        },
+        "asym_display": {
+          "bits": "21",
+          "description": "ASYM DISPLAY (bit status 1)"
+        },
+        "clb_demand_display": {
+          "bits": "22",
+          "description": "CLB DEMAND DISPLAY (bit status 1)"
+        },
+        "mct_demand_display": {
+          "bits": "23",
+          "description": "MCT DEMAND DISPLAY (bit status 1)"
+        }
+      },
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "fadec_dw_272": {
+      "label": "272",
+      "description": "FADEC Discrete Word (A320 AMM 22-86-00: FMGC OWN A, 4 bits DIS, XMSN 60 ms)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {
+        "a_thr_sel": {
+          "bits": "19",
+          "description": "A/THR SEL (bit status 1)"
+        },
+        "flex_to_mode_sel": {
+          "bits": "23",
+          "description": "FLEX TO MODE SEL (bit status 1)"
+        },
+        "core_speed_at_or_above_idle": {
+          "bits": "28",
+          "description": "CORE SPEED AT OR ABOVE IDLE — N1 >= N1 IDLE (bit status 1)"
+        },
+        "n1_idle": {
+          "bits": "29",
+          "description": "N1 IDLE (bit status 1)"
+        }
+      },
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "discrete_word_3_273": {
+      "label": "273",
+      "description": "Discrete Word 3 (A320 AMM 22-86-00: FMGC OWN A, 13 bits DIS, XMSN 60 ms)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {
+        "hdg_preset": {
+          "bits": "11",
+          "description": "HDG PRESET (bit status 1)"
+        },
+        "alt_acq_arm": {
+          "bits": "12",
+          "description": "ALT ACQ ARM (bit status 1)"
+        },
+        "alt_acq_mode_arm_possible": {
+          "bits": "13",
+          "description": "ALT ACQ MODE ARM POSSIBLE (bit status 1)"
+        },
+        "nav_arm": {
+          "bits": "14",
+          "description": "NAV ARM (bit status 1)"
+        },
+        "alt_acq_mode_arm_possible_15": {
+          "bits": "15",
+          "description": "ALT ACQ MODE ARM POSSIBLE (duplicate, revision)"
+        },
+        "loc_mode_arm": {
+          "bits": "16",
+          "description": "LOC MODE ARM (bit status 1)"
+        },
+        "fg_approach_phase": {
+          "bits": "17",
+          "description": "FG APPROACH PHASE (revision)"
+        },
+        "fma_longi_mode": {
+          "bits": "18",
+          "description": "FMA LONGI MODE (revision)"
+        },
+        "loc_back_beam_selection": {
+          "bits": "19",
+          "description": "LOC BACK BEAM SELECTION (revision)"
+        },
+        "land_mode_arm": {
+          "bits": "20",
+          "description": "LAND MODE ARM (bit status 1)"
+        },
+        "gs_capt_before_loc_capt": {
+          "bits": "21",
+          "description": "GS CAPT BEFORE LOC CAPT (revision)"
+        },
+        "glide_arm": {
+          "bits": "22",
+          "description": "GLIDE ARM (bit status 1)"
+        },
+        "final_disarm": {
+          "bits": "23",
+          "description": "FINAL DISARM (bit status 1)"
+        },
+        "climb_arm": {
+          "bits": "24",
+          "description": "CLIMB ARM (bit status 1)"
+        },
+        "descent_arm": {
+          "bits": "25",
+          "description": "DESCENT ARM (bit status 1)"
+        },
+        "long_mode_reset": {
+          "bits": "26",
+          "description": "LONG MODE RESET (bit status 1)"
+        },
+        "lat_mode_reset": {
+          "bits": "27",
+          "description": "LAT MODE RESET (bit status 1)"
+        },
+        "qfu_equal_com": {
+          "bits": "28",
+          "description": "QFU EQUAL COM (bit status 1)"
+        },
+        "fma_longi_box": {
+          "bits": "29",
+          "description": "FMA LONGI BOX (revision)"
+        }
+      },
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "discrete_word_2_275": {
+      "label": "275",
+      "description": "Discrete Word 2 (A320 AMM 22-86-00: FMGC OWN A, 15 bits DIS, XMSN 60 ms)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {
+        "runway_mode": {
+          "bits": "11",
+          "description": "RUNWAY MODE (bit status 1)"
+        },
+        "nav_mode": {
+          "bits": "12",
+          "description": "NAV MODE (bit status 1)"
+        },
+        "loc_capt_mode": {
+          "bits": "13",
+          "description": "LOC CAPT MODE (bit status 1)"
+        },
+        "loc_track_mode": {
+          "bits": "14",
+          "description": "LOC TRACK MODE (bit status 1)"
+        },
+        "roll_go_around_mode": {
+          "bits": "15",
+          "description": "ROLL GO AROUND MODE (bit status 1)"
+        },
+        "hdg_mode": {
+          "bits": "16",
+          "description": "HDG MODE (bit status 1)"
+        },
+        "track_mode": {
+          "bits": "17",
+          "description": "TRACK MODE (bit status 1)"
+        },
+        "runway_loc_sub_mode": {
+          "bits": "20",
+          "description": "RUNWAY LOC SUB MODE (bit status 1)"
+        },
+        "h_path_sub_mode": {
+          "bits": "21",
+          "description": "H/PATH SUB MODE (bit status 1)"
+        },
+        "hdg_sub_mode": {
+          "bits": "22",
+          "description": "HDG SUB MODE (bit status 1)"
+        },
+        "track_rwy_track_sub_mode": {
+          "bits": "23",
+          "description": "TRACK/RWY TRACK SUB MODE (bit status 1)"
+        },
+        "vor_sub_mode": {
+          "bits": "24",
+          "description": "VOR SUB MODE (bit status 1)"
+        },
+        "align_sub_mode": {
+          "bits": "25",
+          "description": "ALIGN SUB MODE (bit status 1)"
+        },
+        "rollout_sub_mode": {
+          "bits": "26",
+          "description": "ROLLOUT SUB MODE (bit status 1)"
+        },
+        "roll_fd_bars_flashing": {
+          "bits": "28",
+          "description": "ROLL FD BARS FLASHING (bit status 1)"
+        }
+      },
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    },
+    "discrete_word_6_276": {
+      "label": "276",
+      "description": "Discrete Word 6 (A320 AMM 22-86-00: FMGC OWN A, 13 bits DIS, XMSN 60 ms)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {
+        "fadec_own_supplied": {
+          "bits": "12",
+          "description": "FADEC OWN SUPPLIED (bit status 1)"
+        },
+        "spd_mach_cond": {
+          "bits": "13",
+          "description": "SPD/MACH COND (bit status 1)"
+        },
+        "s213": {
+          "bits": "14",
+          "description": "S213"
+        },
+        "s39": {
+          "bits": "15",
+          "description": "S39"
+        },
+        "s40": {
+          "bits": "16",
+          "description": "S40"
+        },
+        "adc_own_acq": {
+          "bits": "17",
+          "description": "ADC OWN ACQ (bit status 1)"
+        },
+        "adc_3_acq": {
+          "bits": "18",
+          "description": "ADC 3 ACQ (bit status 1)"
+        },
+        "irs_own_valid": {
+          "bits": "19",
+          "description": "IRS OWN VALID (bit status 1)"
+        },
+        "irs_opp_valid": {
+          "bits": "20",
+          "description": "IRS OPP VALID (bit status 1)"
+        },
+        "irs_3_valid": {
+          "bits": "21",
+          "description": "IRS 3 VALID (bit status 1)"
+        },
+        "comp_n1_own": {
+          "bits": "22",
+          "description": "COMP N1 OWN (bit status 1)"
+        },
+        "s27": {
+          "bits": "23",
+          "description": "S27"
+        },
+        "s11": {
+          "bits": "24",
+          "description": "S11"
+        },
+        "alt_ctl_law": {
+          "bits": "25",
+          "description": "ALT CTL LAW (bit status 1)"
+        },
+        "alt_acq_ctl_law": {
+          "bits": "26",
+          "description": "ALT ACQ CTL LAW (bit status 1)"
+        },
+        "vs_ctl_law": {
+          "bits": "27",
+          "description": "V/S CTL LAW (bit status 1)"
+        },
+        "fpa_ctl_law": {
+          "bits": "28",
+          "description": "FPA CTL LAW (bit status 1)"
+        },
+        "hdg_ctl_law": {
+          "bits": "29",
+          "description": "HDG CTL LAW (bit status 1)"
+        }
+      },
+      "timing_ms": {
+        "min": 30,
+        "max": 60
+      }
+    }
+  }
+}

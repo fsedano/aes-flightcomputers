@@ -1,0 +1,74 @@
+{
+  "brand": "",
+  "name": "mcdu_rx",
+  "note": "ARINC 739 — labels received by an LRU from an MCDU. The MCDU transmits ALL its messages to this LRU using the LRU's SAL as the ARINC label number; the message type (ENQ, CTS, KEYBOARD, ACK, SYN, NAK, ...) is encoded in the upper bits of the data field. The logic script decodes message type from .packet directly.",
+  "labels": {
+    "lru_sal_277": {
+      "label": "277",
+      "description": "ARINC 739 SAL for the Hello root-menu LRU. MCDU sends all messages (ENQ/CTS/KBD/ACK/SYN/NAK) on this label number; sub-type is in bits 24-30 of the data field.",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 50,
+        "max": 5000
+      }
+    },
+    "lru_sal_306": {
+      "label": "306",
+      "description": "ARINC 739 SAL for the Status root-menu LRU. MCDU sends all messages (ENQ/CTS/KBD/ACK/SYN/NAK) on this label number; sub-type is in bits 24-30 of the data field.",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 50,
+        "max": 5000
+      }
+    },
+    "discrete_270": {
+      "label": "270",
+      "description": "MCDU NORMAL DISCRETE WORD (270) — health and status bits broadcast by the MCDU.",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {
+        "P1_rx_fail": {
+          "bits": "11",
+          "description": "Port 1 receiver fail"
+        },
+        "P1_data_fail": {
+          "bits": "12",
+          "description": "Port 1 data fail"
+        },
+        "mcdu_status": {
+          "bits": "29",
+          "description": "MCDU status"
+        }
+      },
+      "timing_ms": {
+        "min": 50,
+        "max": 5000
+      }
+    }
+  }
+}

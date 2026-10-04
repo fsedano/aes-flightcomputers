@@ -1,0 +1,69 @@
+{
+  "name": "A320/ACARS",
+  "display_name": "ACARS MU (skeleton, opt. fit)",
+  "inputs": [
+    {
+      "name": "MCDU 1 RX",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ",
+      "equipment_files": [
+        "mcdu1_rx.json"
+      ]
+    },
+    {
+      "name": "MCDU 2 RX",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ",
+      "equipment_files": [
+        "mcdu2_rx.json"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "MCDU 1 TX",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ",
+      "equipment_files": [
+        "bus1.json"
+      ],
+      "labels": [
+        {
+          "label": "172",
+          "name": "lru_id_172",
+          "period_min_ms": 900,
+          "period_max_ms": 1100
+        },
+        {
+          "label": "220",
+          "name": "a739_link_220",
+          "period_min_ms": 150,
+          "period_max_ms": 250
+        }
+      ]
+    },
+    {
+      "name": "MCDU 2 TX",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ",
+      "equipment_files": [
+        "bus2.json"
+      ],
+      "labels": [
+        {
+          "label": "172",
+          "name": "lru_id_172",
+          "period_min_ms": 900,
+          "period_max_ms": 1100
+        },
+        {
+          "label": "220",
+          "name": "a739_link_220",
+          "period_min_ms": 150,
+          "period_max_ms": 250
+        }
+      ]
+    }
+  ],
+  "script": "logic.star"
+}

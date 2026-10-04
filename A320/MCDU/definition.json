@@ -1,0 +1,26 @@
+{
+  "name": "A320/MCDU",
+  "display_name": "MCDU FMGC (ARINC 739)",
+  "inputs": [
+    {
+      "name": "MCDU RX",
+      "protocol": "ARINC429",
+      "speed": "S12_KHZ"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "MCDU TX",
+      "protocol": "ARINC429",
+      "speed": "S100_KHZ",
+      "mode": "manual",
+      "equipment_files": [
+        "mcdurx.json"
+      ]
+    }
+  ],
+  "script": "logic.star",
+  "sim_params": [
+    "mcdu1.screen"
+  ]
+}

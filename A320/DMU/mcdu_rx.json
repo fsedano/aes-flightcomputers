@@ -1,0 +1,188 @@
+{
+  "brand": "Airbus (skeleton)",
+  "name": "rx_mcdu",
+  "note": "ARINC 739 link MCDU -> DMU (from MCDU): MCDU ID 377, Discrete Word #1 270, Maintenance Word #1 350, plus SAL-addressed protocol words (every drop sees every word).",
+  "labels": {
+    "mcdu_id_377": {
+      "label": "377",
+      "description": "MCDU identifier word \u2014 decimal '39' + selected FMC port bits (A739A att. 3)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 900,
+        "max": 1100
+      }
+    },
+    "mcdu_dw1_270": {
+      "label": "270",
+      "description": "MCDU Discrete Word #1 \u2014 health/status bits",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {
+        "P1_rx_fail": {
+          "bits": "11",
+          "description": "Port 1 receiver fail"
+        },
+        "P2_rx_fail": {
+          "bits": "12",
+          "description": "Port 2 receiver fail"
+        },
+        "mcdu_fail": {
+          "bits": "13",
+          "description": "MCDU internal failure"
+        }
+      },
+      "timing_ms": {
+        "min": 400,
+        "max": 600
+      }
+    },
+    "maint_w1_350": {
+      "label": "350",
+      "description": "Maintenance Word #1 \u2014 manufacturer-defined (A739A 3.5)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 900,
+        "max": 1100
+      }
+    },
+    "sal_306_fmgc": {
+      "label": "306",
+      "description": "Protocol words to FMGC, SAL 306 (ENQ/CTS/ACK/NAK/SYN)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 150,
+        "max": 250
+      }
+    },
+    "sal_302_cfdiu": {
+      "label": "302",
+      "description": "Protocol words to CFDIU, SAL 302 (placeholder SAL)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 150,
+        "max": 250
+      }
+    },
+    "sal_304_acars": {
+      "label": "304",
+      "description": "Protocol words to ACARS MU, SAL 304 (placeholder SAL)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 150,
+        "max": 250
+      }
+    },
+    "sal_305_dmu": {
+      "label": "305",
+      "description": "Protocol words to DMU, SAL 305 (placeholder SAL)",
+      "data_type": "DISCRETE",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "RX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {},
+      "timing_ms": {
+        "min": 150,
+        "max": 250
+      }
+    }
+  }
+}

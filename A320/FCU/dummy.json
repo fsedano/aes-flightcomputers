@@ -1,0 +1,27 @@
+{
+  "brand": "",
+  "name": "dummy",
+  "note": "",
+  "labels": {
+    "dummy_invalid": {
+      "label": "222",
+      "description": "",
+      "data_type": "BNR",
+      "sdi": 0,
+      "sdi_is_data": false,
+      "channel_direction": "TX",
+      "ssm_function": "BNR_DISCRETE",
+      "ssm": "NORMAL_OPERATION",
+      "data_init": "0",
+      "value_resolution": 1,
+      "data_bits": 19,
+      "data_is_signed": false,
+      "value_clamping": {
+        "enable": false,
+        "min": 0,
+        "max": 0
+      },
+      "pad_bits": {}
+    }
+  }
+}
