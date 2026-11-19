@@ -82,7 +82,7 @@
             "channel_direction": "TX",
             "pad_bits": {},
             "ssm_function": "SYSTEM_STATUS",
-            "value_resolution": 1.0,
+            "value_resolution": 0.1,
             "ssm": "NORMAL_OPERATION",
             "data_init": "0",
             "timing_ms": {
@@ -92,7 +92,7 @@
             "value_clamping": {
                 "enable": true,
                 "min": 0.0,
-                "max": 3599.0
+                "max": 359.9
             }
         },
         "hdg_m_bcd": {
@@ -105,7 +105,7 @@
             "channel_direction": "TX",
             "pad_bits": {},
             "ssm_function": "SYSTEM_STATUS",
-            "value_resolution": 1.0,
+            "value_resolution": 0.1,
             "ssm": "NORMAL_OPERATION",
             "data_init": "0",
             "timing_ms": {
@@ -115,7 +115,7 @@
             "value_clamping": {
                 "enable": true,
                 "min": 0.0,
-                "max": 3599.0
+                "max": 359.9
             }
         },
         "wind_spd_bcd": {
@@ -174,7 +174,7 @@
             "channel_direction": "TX",
             "pad_bits": {},
             "ssm_function": "SYSTEM_STATUS",
-            "value_resolution": 1.0,
+            "value_resolution": 0.1,
             "ssm": "NORMAL_OPERATION",
             "data_init": "0",
             "timing_ms": {
@@ -184,7 +184,7 @@
             "value_clamping": {
                 "enable": true,
                 "min": 0.0,
-                "max": 3599.0
+                "max": 359.9
             }
         },
         "lat": {
@@ -312,7 +312,7 @@
             "channel_direction": "TX",
             "pad_bits": {},
             "data_is_signed": true,
-            "value_resolution": 3.12109375,
+            "value_resolution": 1.0,
             "ssm": "NORMAL_OPERATION",
             "data_init": "0",
             "timing_ms": {
@@ -322,7 +322,7 @@
             "value_clamping": {
                 "enable": true,
                 "min": 0.0,
-                "max": 799.0
+                "max": 255.0
             }
         },
         "wind_dir": {
