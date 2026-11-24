@@ -18,5 +18,10 @@ def on_data_from_sim(sim_id, key, value):
     print("sim", key, "=", value)
     if key != "heading":
         return
+    # None: no heading from the simulator (or it stopped); the synchro goes
+    # off so the RMI shows its flag rather than the last heading.
+    if value == None:
+        analog.synchro.set("RMI heading", 0.0, enable=False)
+        return
     # Synchro value is a shaft angle in radians.
     analog.synchro.set("RMI heading", float(value) * DEG2RAD)
