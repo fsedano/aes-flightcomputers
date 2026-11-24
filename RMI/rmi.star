@@ -24,8 +24,15 @@ def send_outputs():
 def on_data_from_sim(sim_id, key, value):
     if key != "heading":
         return
+    lbl = arinc429.labels.c_irs.hdg_m_bcd
+    # None: the simulator has no heading (or stopped); the word goes out as
+    # no computed data so the RMI shows its flag rather than the last value.
+    if value == None:
+        lbl.ssm = 1
+        return
     state["heading_deg"] = float(value)
-    arinc429.labels.c_irs.hdg_m_bcd.value = float(value)
+    lbl.ssm = 0
+    lbl.value = float(value)
 
 def on_linecard_data(port, data):
     label_octal = data["label"]

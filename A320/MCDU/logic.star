@@ -58,6 +58,6 @@ def on_linecard_data(port, data):
     a739.on_packet(port, device_id, channel, label_octal, packet, lbl)
 
 def on_data_from_sim(sim_id, key, value):
-    if key == "mcdu1.screen":
+    if key == "mcdu1.screen" and value != None:
         print("[mcdu/fmgc] sim screen update (%d bytes)" % len(value))
     a739.on_sim_data(key, value)
